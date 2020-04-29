@@ -94,7 +94,6 @@ def predict_tts():
 
     #-----------tacotron2------------
     hostport = 'localhost:9001'
-    # hostport='101.132.130.63:9001'
 
     channel = grpc.insecure_channel(hostport, options=
                                 [('grpc.max_send_message_length', MAX_MESSAGE_LENGTH),
