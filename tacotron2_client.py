@@ -1,6 +1,5 @@
 #-*- coding: utf-8 -*-
 
-
 from __future__ import print_function
 
 import grpc,time
@@ -29,17 +28,12 @@ syms = symbols.symbols
 
 MAX_MESSAGE_LENGTH=-1
 
-
 def prepare_inputs(inputs):
     max_len = max([len(x) for x in inputs])
     return np.stack([pad_input(x, max_len) for x in inputs]), max_len
 
 def pad_input(x, length):
     return np.pad(x, (0, length - x.shape[0]), mode='constant', constant_values=0)
-
-
-
-
 
 def predict_tts():
 
@@ -62,7 +56,6 @@ def predict_tts():
     print('input_seqs:', input_seqs.shape)
     print('input_lengths_np:', input_lengths_np.shape)
     print('split_infos_np:', split_infos_np.shape)
-
 
     #############################
     # texts = ['k a2 er2 p u3 #2 p ei2 uai4 s uen1 #1 uan2 h ua2 t i1 #4  。']
@@ -87,9 +80,6 @@ def predict_tts():
     # print('input_seqs:', input_seqs.shape)
     # print('input_lengths_np:', input_lengths_np.shape)
     # print('split_infos_np:', split_infos_np.shape)
-
-
-
 
 
     #-----------tacotron2------------
@@ -124,10 +114,7 @@ def predict_tts():
     print(mel_out_np.shape)
     np.save('mel_out1.npy', mel_out_np)
 
-    a = 0
-
     return
-
 
 if __name__ == '__main__':
 
