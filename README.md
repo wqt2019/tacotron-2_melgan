@@ -17,7 +17,7 @@ phone + rhythm(dictionary.txt):
 	000003,b ao2 m a3 #1 p ei4 g ua4 #1 b o3 l uo2 an1 #3  ， d iao1 ch an2 #1 van4 zh en3 #2 d ong3 ueng1 t a4 #4  。   
   
 # tacotron2    
-- Step **(0)**: python frozen_tacotron2.py, set tf_pyfunc = False in tacotron.py, you can freeze the model.  
+- Step **(0)**: python frozen_tacotron2.py, set tf_pyfunc = False in [tacotron.py](./tacotron/models/tacotron.py), you can freeze the model.  
 - Step **(1)**: python gen_serving_model_tacotron2.py , convert pb to savemodel.  
 
 # melgan  
